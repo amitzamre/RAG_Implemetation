@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IRCTC Cancellation Policy RAG Explorer</title>
+    <!-- Google Fonts: Inter and Space Grotesk -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@500;600;700&display=swap" rel="stylesheet">
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="/style.css">
+</head>
+<body>
+    <div class="glass-bg-glows">
+        <div class="glow-1"></div>
+        <div class="glow-2"></div>
+    </div>
+    
+    <div class="app-container">
+        <!-- HEADER -->
+        <header class="app-header">
+            <div class="logo-section">
+                <div class="logo-icon">
+                    <i class="fa-solid fa-train-subway"></i>
+                </div>
+                <div class="logo-text">
+                    <h1>IRCTC CancelRAG</h1>
+                    <span class="subtitle">Educational RAG Pipeline Explorer</span>
+                </div>
+            </div>
+            
+            <div class="controls-section">
+                <div class="control-group">
+                    <label for="llm-mode-select"><i class="fa-solid fa-brain"></i> LLM Mode:</label>
+                    <select id="llm-mode-select" class="custom-select">
+                        <option value="MOCK">MOCK Mode (Instant / Rule-based)</option>
+                        <option value="LOCAL">LOCAL LLM (Qwen 0.5B / Offline CPU)</option>
+                        <option value="CLOUD_GEMINI">CLOUD API (Gemini-1.5-Flash)</option>
+                    </select>
+                </div>
+                <div class="status-indicator">
+                    <span class="pulse-dot"></span>
+                    <span id="system-status">RAG Engine Ready</span>
+                </div>
+            </div>
+        </header>
+
+        <!-- MAIN LAYOUT -->
+        <main class="app-main-layout">
+            
+            <!-- LEFT PANEL: CHAT HUB -->
+            <section class="panel panel-chat">
+                <div class="panel-header">
+                    <h2><i class="fa-regular fa-comments"></i> IRCTC Policy Assistant</h2>
+                    <span class="badge">Active</span>
+                </div>
+                
+                <div id="chat-messages" class="chat-messages-container">
+                    <!-- Standard Welcome Message -->
+                    <div class="message system-message">
+                        <div class="message-content">
+                            <p><strong>Welcome to the IRCTC RAG Explorer!</strong> 🚄</p>
+                            <p>This interactive demo showcases a complete Retrieval-Augmented Generation pipeline built from scratch. Ask any questions about cancellation fees, waitlist refunds, Tatkal rules, or TDR filing.</p>
+                            <p class="suggestions-label">Try asking:</p>
+                            <div class="suggested-queries">
+                                <button class="query-chip">What is the cancellation charge for Sleeper Class confirmed ticket?</button>
+                                <button class="query-chip">Do I get a refund if my ticket is RAC?</button>
+                                <button class="query-chip">What happens if Indian Railways cancels my train?</button>
+                                <button class="query-chip">Can I get a refund on a confirmed Tatkal ticket?</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Input area -->
+                <form id="chat-form" class="chat-input-form">
+                    <div class="input-wrapper">
+                        <input 
+                            type="text" 
+                            id="user-query" 
+                            placeholder="Ask about cancellation rules (e.g. 'AC 3 Tier fees before 24 hours')..." 
+                            autocomplete="off"
+                            required
+                        >
+                        <button type="submit" id="send-btn" class="send-button">
+                            <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </div>
+                </form>
+            </section>
+
+            <!-- RIGHT PANEL: RAG BRAIN INSPECTOR -->
+            <section class="panel panel-inspector">
+                <div class="panel-header">
+                    <h2><i class="fa-solid fa-microchip"></i> RAG Inspector</h2>
+                    <span class="badge badge-accent">Live Telemetry</span>
+                </div>
+                
+                <!-- Tab Headers -->
+                <div class="inspector-tabs">
+                    <button class="tab-btn active" data-tab="chunks-tab">
+                        <i class="fa-solid fa-list-check"></i> 1. Retrieval Chunks
+                    </button>
+                    <button class="tab-btn" data-tab="prompt-tab">
+                        <i class="fa-solid fa-code"></i> 2. Injected Prompt
+                    </button>
+                    <button class="tab-btn" data-tab="perf-tab">
+                        <i class="fa-solid fa-gauge-high"></i> 3. Latency
+                    </button>
+                </div>
+
+                <!-- Tab Contents -->
+                <div class="tab-content-container">
+                    
+                    <!-- TAB 1: RETRIEVED CHUNKS -->
+                    <div id="chunks-tab" class="tab-pane active">
+                        <div class="tab-pane-intro">
+                            <h3>MANUAL VECTOR SEARCH & RANKING</h3>
+                            <p>Here are the top-ranked text blocks from <code>knowledge_base.txt</code> retrieved using raw mathematical <strong>Cosine Similarity</strong>.</p>
+                        </div>
+                        <div id="chunks-list" class="chunks-list-container">
+                            <div class="empty-inspector-state">
+                                <i class="fa-solid fa-magnifying-glass-chart"></i>
+                                <p>Ask a question to see real-time vector search results!</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- TAB 2: INJECTED PROMPT -->
+                    <div id="prompt-tab" class="tab-pane">
+                        <div class="tab-pane-intro">
+                            <h3>PROMPT ENGINEERING & CONTEXT SYNTHESIS</h3>
+                            <p>This is the exact structured prompt sent to the LLM. It embeds the raw retrieved chunks, binding them as the exclusive grounding context.</p>
+                        </div>
+                        <div class="prompt-code-wrapper">
+                            <pre id="prompt-content" class="prompt-text-box"><code>Ask a question to visualize the constructed RAG prompt template.</code></pre>
+                        </div>
+                    </div>
+
+                    <!-- TAB 3: LATENCY PERFORMANCE -->
+                    <div id="perf-tab" class="tab-pane">
+                        <div class="tab-pane-intro">
+                            <h3>RAG PIPELINE PERFORMANCE METRICS</h3>
+                            <p>Execution latency breakdown in milliseconds for each component of the RAG pipeline.</p>
+                        </div>
+                        <div class="performance-dashboard">
+                            <div class="perf-card-group">
+                                <div class="perf-metric-card glow-cyan">
+                                    <div class="metric-icon"><i class="fa-solid fa-magnifying-glass"></i></div>
+                                    <div class="metric-value" id="time-retrieval">-</div>
+                                    <div class="metric-label">Embedding & Cosine Search</div>
+                                </div>
+                                <div class="perf-metric-card glow-purple">
+                                    <div class="metric-icon"><i class="fa-solid fa-bolt"></i></div>
+                                    <div class="metric-value" id="time-generation">-</div>
+                                    <div class="metric-label">LLM Answer Generation</div>
+                                </div>
+                            </div>
+                            <div class="perf-metric-card total-metric glow-orange">
+                                <div class="metric-icon"><i class="fa-solid fa-clock"></i></div>
+                                <div class="metric-value" id="time-total">-</div>
+                                <div class="metric-label">End-to-End Latency</div>
+                            </div>
+                            
+                            <div class="math-explainer-card">
+                                <h4><i class="fa-solid fa-graduation-cap"></i> Educational Takeaway</h4>
+                                <p><strong>Embedding Search</strong> uses local CPU-based vector calculations and is virtually instantaneous (&lt;10ms). The bulk of the delay comes from <strong>LLM Answer Generation</strong>, illustrating the trade-off of running large local models vs lightweight API calls.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+        
+        <!-- FOOTER -->
+        <footer class="app-footer">
+            <p>IRCTC RAG Explorer • Built with ❤️ using FastAPI, SentenceTransformers, and Pure CSS Glassmorphism</p>
+        </footer>
+    </div>
+    
+    <script src="/app.js"></script>
+</body>
+</html>

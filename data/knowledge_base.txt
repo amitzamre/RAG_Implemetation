@@ -1,0 +1,46 @@
+# SECTION 1: CONFIRMED TICKET CANCELLATION CHARGES (MORE THAN 48 HOURS)
+If a confirmed ticket is cancelled online more than 48 hours before the scheduled departure of the train, flat cancellation charges per passenger are deducted. The charges depend on the ticket class:
+* AC First Class / Executive Class: Rs. 240 + GST
+* AC 2 Tier / First Class: Rs. 200 + GST
+* AC 3 Tier / AC Chair Car / AC 3 Economy Class: Rs. 180 + GST
+* Sleeper Class: Rs. 120 (No GST for Sleeper/Second class)
+* Second Class (Reserved): Rs. 60 (No GST)
+The remaining balance of the fare is refunded directly to the customer's payment account.
+
+# SECTION 2: CONFIRMED TICKET CANCELLATION CHARGES (48 HOURS TO 12 HOURS)
+If a confirmed ticket is cancelled online between 48 hours and up to 12 hours before the scheduled departure of the train, the cancellation charge will be 25% of the total ticket fare.
+However, this 25% cancellation charge is subject to a minimum flat rate (as listed in Section 1). This means the cancellation charge will be either 25% of the fare or the flat rate (e.g., Rs. 120 for Sleeper Class, Rs. 180 for AC 3 Tier), whichever is higher. GST is applicable on cancellation charges for all AC classes.
+
+# SECTION 3: CONFIRMED TICKET CANCELLATION CHARGES (12 HOURS TO 4 HOURS)
+If a confirmed ticket is cancelled online between 12 hours and up to 4 hours before the scheduled departure of the train (or before chart preparation, whichever is earlier), the cancellation charge will be 50% of the total ticket fare.
+This 50% cancellation charge is subject to the minimum flat rate (as listed in Section 1). This means the cancellation charge will be either 50% of the fare or the flat rate (e.g., Rs. 120 for Sleeper, Rs. 180 for AC 3 Tier), whichever is higher. GST is applicable on cancellation charges for all AC classes.
+
+# SECTION 4: CONFIRMED TICKET CANCELLATION CHARGES (LESS THAN 4 HOURS / AFTER CHART PREPARATION)
+No refund of fare shall be admissible on online cancelled tickets if a confirmed ticket is cancelled less than 4 hours before the scheduled departure of the train.
+Additionally, online cancellation of e-tickets is not allowed once the reservation chart has been prepared (which typically happens 4 hours before departure). In cases where the passenger does not travel but chart is prepared, they must file an online Ticket Deposit Receipt (TDR) to claim a refund, which is subject to Railway administrative verification.
+
+# SECTION 5: RAC AND WAITLISTED TICKET CANCELLATION POLICY
+For Reservation Against Cancellation (RAC) and Waitlisted (WL) e-tickets:
+* Online cancellation of RAC or Waitlisted tickets is allowed up to 4 hours before the scheduled departure of the train. A flat clerkage charge of Rs. 60 + GST per passenger is deducted, and the remaining fare is fully refunded.
+* If a waitlisted e-ticket remains fully waitlisted (status "WL") after the final reservation chart is prepared, the ticket is automatically cancelled by the IRCTC system. The entire fare is automatically refunded back to the passenger's source bank account without any clerkage charge or deduction. The passenger does not need to file a TDR or initiate any manual cancellation.
+
+# SECTION 6: TATKAL TICKET CANCELLATION RULES
+The Tatkal booking scheme has strict refund rules:
+* Confirmed Tatkal Tickets: No refund of fare is granted under any circumstances upon the cancellation of confirmed Tatkal tickets.
+* Waitlisted Tatkal Tickets: If a Tatkal ticket remains waitlisted (WL) and is cancelled, a clerkage charge of Rs. 60 + GST per passenger is deducted, and the remaining balance is refunded. If the Tatkal ticket remains on the waiting list after chart preparation, it is automatically cancelled and refunded with clerkage deduction.
+
+# SECTION 7: REFUNDS IN CASE OF TRAIN CANCELLATION
+If a train is officially cancelled by the Indian Railways due to natural disasters, track maintenance, accidents, or other operational issues:
+* A full refund of the ticket fare is granted automatically to the passenger.
+* The passenger does not need to cancel their e-ticket manually or file an online TDR. The refund process is initiated automatically by IRCTC, and the entire amount is credited back to the customer's source account used for booking.
+
+# SECTION 8: REFUNDS FOR LATE RUNNING TRAINS
+If a train is running more than 3 hours late from its scheduled departure station and the passenger decides not to travel:
+* The passenger is eligible for a full refund of the ticket fare without any cancellation charges.
+* To claim this full refund, the passenger must file an online Ticket Deposit Receipt (TDR) before the actual departure of the train from their boarding station. If they fail to file the TDR before departure, no refund is granted.
+
+# SECTION 9: TDR (TICKET DEPOSIT RECEIPT) FILING RULES
+A Ticket Deposit Receipt (TDR) must be filed online in specific situations where standard online cancellation is no longer available (such as after chart preparation):
+* TDR must be filed within the prescribed time limits set by Indian Railways (usually within 3 days to 10 days of scheduled departure depending on the reason, but before departure for cases like late running trains or AC failure).
+* Common reasons for filing a TDR include: Train running late by more than 3 hours, AC failure in AC class, passenger travelled in lower class than booked, or passenger could not travel due to family emergency (requires verification).
+* Refund approval is subject to verification of railway records and may take 30 to 45 days to process.
